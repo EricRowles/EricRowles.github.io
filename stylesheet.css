@@ -1,0 +1,384 @@
+/* **********************************************************
+RESET CSS
+************************************************************/
+
+
+
+/************************************************************
+PAGE
+************************************************************/
+
+.fullheight {
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+body {
+	color:#C0C0C0;
+	font-family: cursive;
+	font-size: 100%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: 0px;
+	overflow: hidden;
+	background: linear-gradient(to bottom, #444444, #111111);
+}
+
+footer {
+	height: 80px;
+	width: 100%;
+	padding: 15px;
+	border: 2px solid #555555;
+	position: fixed;
+	background-color: #101010;
+	left: 0;
+	bottom: 0;
+}
+
+#game {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height:100%;
+}
+
+/************************************************************
+ALL
+************************************************************/	
+
+button {
+	padding: 5px;
+	text-align: center;
+	border: 1px solid #555555;
+	font-family: cursive;
+}
+
+.squareButton {
+	background-color: #555;
+	width: 40px;
+	height: 40px;
+	border: 4px outset #333;
+	margin: 10px;
+	position: relative;
+}
+
+.squareButton:hover {
+	background-color: #444;
+	border: 4px inset #333;
+	cursor: help;
+	position: relative;
+}
+.squareButton span {
+	display: none;
+	position: absolute;
+	min-width: 180px;
+	text-align: left;
+	z-index: 100;
+	top: 25px;
+	border: 4px solid #222;
+	background: #333;
+	padding: 5px;
+	opacity: 0.8;
+}
+
+.squareButton:hover span {
+	display: block;
+}
+
+.fullButton {
+	background-color: #555555;
+	border: 2px solid #383838;
+	color: #AAAAAA;
+	text-align: center;
+	font-size: 16px;
+	padding: 8px;
+	border-radius: 12px;	
+}
+
+.fullButton:hover {
+	background-color: #606060;
+}
+
+.center-vertical {
+	margin: auto;
+}
+
+.icon {
+	height: 20px;
+	width: 20px;
+	margin-left: 4px;
+	margin-right: 4px;
+	border-radius: 4px;
+	float: left;
+}
+
+.hidden {
+	display: none;
+}
+
+/************************************************************
+NAVIGATION
+************************************************************/
+
+
+.navpage {
+	height: 100%;
+	width:100%;
+	padding-bottom:140px;
+}
+
+.nav-btn {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+	background-color: #777777;
+	
+}
+.nav-btn > button {
+	width: 10%;
+	height: 60px;
+	line-height: 40px;
+	background-color: #353535;
+	color: #AAAAAA;
+	font-size: 120%;
+	transition: 0.2s;
+	flex-grow: 1;
+}
+.nav-btn > button:hover {
+	background-color: #404040;
+}
+.nav-btn > button.active {
+	background-color: #404040;
+}
+
+#options {
+	flex-grow: 0;
+	width: 100px;
+}
+
+/************************************************************
+HOME
+************************************************************/
+
+
+
+#home-mid {
+	height: 100%;
+	width: 70%;
+	float: left;
+	padding: 0px;
+	background: linear-gradient(to bottom, #444444, #111111);
+	border: 1px solid #555555;
+	position: relative;
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+}
+
+.home-side {
+	height: 100%;
+	width: 15%;
+	float: left;
+	padding: 15px;
+	border: 1px solid #555555;
+	background: linear-gradient(to bottom, #444, #111);
+	display: block;
+	position: relative;
+}
+
+.home-divc {
+	position: relative;
+	height: 33.333%;
+	border: 5px ridge #333;
+	padding: 10px;
+}
+
+.stat {
+	height: 25px;
+	width: 125px;
+	display:inline-block;
+	top: 0px;
+	padding: 15px;
+	padding-bottom: 30px;
+	position:relative;
+	word-spacing: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: right;
+}
+
+.stat-research:before {
+	content: url(images/research.png) " ";
+}
+
+.stat-assets:before {
+	content: url(images/assets.png) " ";
+}
+
+.stat-hero:before {
+	content: url(images/hero.png) " ";
+}
+
+#text-select {
+	height: 50px;
+	width: 100%;
+	padding: 5px;
+	background-color: #121212;
+	display: inline-block;
+	left: 0;
+	bottom: 0;
+}
+
+#home-tabs {
+	width: 100%;
+	height: 30px;
+	background-color: #444;
+	margin: 0px;
+}
+
+#text-box {
+	overflow-y: scroll;
+	scrollbar-width: none;
+	height:100%;
+	width: 100%;
+	border: 5px double #555;
+	flex-grow:1;
+}
+
+#text-box::-webkit-scrollbar {
+  display: none;
+}
+
+.dragonText {
+	text-align:right;
+	color: #00B;
+	font-size: 18px;
+	padding: 0px;
+	padding-left: 8px;
+	padding-right: 16px;
+	background-color: #667;
+	border: 4px solid #335;
+	border-radius: 16px;
+	margin: 20px;
+	-webkit-box-shadow: 0px 0px 10px 3px #555; 
+	box-shadow: 0px 0px 10px 3px #555;
+}
+
+.gotText {
+	text-align:left;
+	color: #4B4;
+	font-size: 25px;
+	padding: 8px;
+	background-color: #676;
+	border: 4px solid #335;
+	border-radius: 8px;
+	margin: 20px;
+}
+
+
+
+/************************************************************
+RESEARCH
+************************************************************/
+
+.res-mid {
+	height: 100%;
+	width: 70%;
+	float: left;
+	padding: 0px;
+	background: linear-gradient(to bottom, #444444, #111111);
+	border: 1px solid #555555;
+	position: relative;
+	bottom: 4px;
+	padding: 8px;
+}
+
+.res-side {
+	height: 100%;
+	width: 30%;
+	float: left;
+	padding: 15px;
+	border: 1px solid #555555;
+	background: linear-gradient(to bottom, #444444, #111111);
+	display: block;
+	position: relative;
+	bottom: 4px;
+}
+
+/************************************************************
+ENGINEERING
+************************************************************/
+
+.eng-mid {
+	height: 100%;
+	width: 70%;
+	float: left;
+	padding: 0px;
+	background: linear-gradient(to bottom, #444444, #111111);
+	border: 1px solid #555555;
+	position: relative;
+	bottom: 4px;
+	padding: 8px;
+}
+
+.eng-side {
+	height: 100%;
+	width: 15%;
+	float: left;
+	padding: 15px;
+	border: 1px solid #555555;
+	background: linear-gradient(to bottom, #444444, #111111);
+	display: block;
+	position: relative;
+	bottom: 4px;
+}
+
+/************************************************************
+DEPLOY
+************************************************************/
+
+.dpl-mid {
+	height: 100%;
+	width: 70%;
+	float: left;
+	padding: 0px;
+	background: linear-gradient(to bottom, #444444, #111111);
+	border: 1px solid #555555;
+	position: relative;
+	bottom: 4px;
+	padding: 8px;
+}
+
+.dpl-side {
+	height: 100%;
+	width: 15%;
+	float: left;
+	padding: 15px;
+	border: 1px solid #555555;
+	background: linear-gradient(to bottom, #444444, #111111);
+	display: block;
+	position: relative;
+	bottom: 4px;
+}
+
+/************************************************************
+END
+************************************************************/
+
+
+
+
+
+
