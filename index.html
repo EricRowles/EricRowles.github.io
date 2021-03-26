@@ -4,19 +4,19 @@
 <!--[Name in tab]-->
 	<title>Eric Rowles</title>
 <!--[icon in tab]-->
-<!--<link rel="icon" href="icon.png">-->
+	<link rel="icon" href="icon.png">
 <!-- [define character set] -->
 	<meta charset="UTF-8">
 <!--[allows browser to auto-set view width]-->
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <!--[Reference to stylesheets]-->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
-	<link rel="stylesheet" href="stylesheet.css"> 
+	<link rel="stylesheet" href="stylesheet.css"> 	
 
-</head>	
+</head>		
 
 <body>
-	<div class="w3-container">
+	<div class="w3-container">	
 		<div id="optionsMenu" class="w3-modal">
 			<div class="w3-modal-content">
 				<div class="w3-container">
@@ -29,16 +29,16 @@
 	</div>
 	<div id="game">
 		<div class="nav-btn">										<!--[Navigation buttons at top of the screen]-->
-			<button class="navButton" onclick="navPage(event, 'homePage')">Home</button>
-			<button class="navButton" id="researchTab" onclick="navPage(event, 'researchPage')">Research</button>
-			<button class="navButton" id="engineeringTab" onclick="navPage(event, 'engineeringPage')">Engineering</button>
-			<button class="navButton" id="assaultTab" onclick="navPage(event, 'deployPage')">Assault</button>
+			<button class="navButton active" onclick="navPage(event, 'homePage')">Home</button>
+			<button class="navButton active" id="researchTab" onclick="navPage(event, 'researchPage')">Research</button>
+			<button class="navButton active" id="engineeringTab" onclick="navPage(event, 'engineeringPage')">Engineering</button>
+			<button class="navButton active" id="assaultTab" onclick="navPage(event, 'deployPage')">Assault</button>
 			<button id="options" onclick="$('#optionsMenu').show();">Options</button>
 		</div>
 		
 		
-		<div id="homePage" class="navpage" style="display:block">		<!--[accept contracts and advance story here]-->
-			<div class="home-side">										<!--[contracts - very much in dev]-->
+		<div id="homePage" class="navpage" style="display:block">
+			<div class="home-side">	
 				<div class="home-divc" id="easy-c">
 				<button class="squareButton" onclick="$('#researchTab').show();$(this).hide();"><span>Clear Research Labs</span></button>
 				<button class="squareButton" onclick="$('#engineeringTab').show();$(this).hide();"><span>Repair Old Factory</span></button>
