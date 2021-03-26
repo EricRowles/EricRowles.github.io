@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+<!--[Name in tab]-->
+	<title>Eric Rowles</title>
+<!--[icon in tab]-->
+<!--<link rel="icon" href="icon.png">-->
+<!-- [define character set] -->
+	<meta charset="UTF-8">
+<!--[allows browser to auto-set view width]-->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--[Reference to stylesheets]-->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+	<link rel="stylesheet" href="stylesheet.css"> 
+
+</head>	
+
+<body>
+	<div class="w3-container">
+		<div id="optionsMenu" class="w3-modal">
+			<div class="w3-modal-content">
+				<div class="w3-container">
+					<span onclick="$('#optionsMenu').hide();" class="w3-button w3-display-topright">&times;</span>
+					<p>Some text. Some text. Some text.</p>
+					<p>Some text. Some text. Some text.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="game">
+		<div class="nav-btn">										<!--[Navigation buttons at top of the screen]-->
+			<button class="navButton" onclick="navPage(event, 'homePage')">Home</button>
+			<button class="navButton" id="researchTab" onclick="navPage(event, 'researchPage')">Research</button>
+			<button class="navButton" id="engineeringTab" onclick="navPage(event, 'engineeringPage')">Engineering</button>
+			<button class="navButton" id="assaultTab" onclick="navPage(event, 'deployPage')">Assault</button>
+			<button id="options" onclick="$('#optionsMenu').show();">Options</button>
+		</div>
+		
+		
+		<div id="homePage" class="navpage" style="display:block">		<!--[accept contracts and advance story here]-->
+			<div class="home-side">										<!--[contracts - very much in dev]-->
+				<div class="home-divc" id="easy-c">
+				<button class="squareButton" onclick="$('#researchTab').show();$(this).hide();"><span>Clear Research Labs</span></button>
+				<button class="squareButton" onclick="$('#engineeringTab').show();$(this).hide();"><span>Repair Old Factory</span></button>
+				<button class="squareButton" onclick="$('#assaultTab').show();$(this).hide();"><span>Launch satellites</span></button>
+				
+				
+				</div>
+				<div class="home-divc" id="medi-c"></div>
+				<div class="home-divc" id="hard-c"></div>
+			</div>
+			
+			
+			<main id="home-mid">				<!--[Chat menu]-->
+				<div id="home-tabs"></div>
+				<div id="text-box"></div>
+				<div id="text-select">									<!--[text selection menu - needs dynamic buttons]-->
+					<button class="fullButton" onclick="reply('dragonText', 'Test')">Test</button>
+					<button class="fullButton" onclick="reply('dragonText', 'Hello')">Hello</button>
+					<button class="fullButton" onclick="reply('dragonText', 'zzz')">Sarcastic</button> 
+				</div>
+			</main>
+			
+			<div class="home-side">				<!--[buttons and stuff]-->
+			</div>
+		</div>
+		
+		<div id="researchPage" class="navpage" style="display:none">	<!--[research and upgrade tech here]-->
+			
+			<main class="res-mid">										<!--[tech 'tree']-->
+				<div class="res-div" id="res-T0"></div>
+				<div class="res-sep" id="res-D0"></div>			<!--End Tutorial-->			
+				<div class="res-div" id="res-T1"></div>
+				<div class="res-sep" id="res-D1"></div>			<!--Engineering-->
+				<div class="res-div" id="res-T2"></div>
+				<div class="res-sep" id="res-D2"></div>			<!--Deploy-->
+				<div class="res-div" id="res-T3"></div>
+				<div class="res-sep" id="res-D3"></div>			<!--MK2-->
+				<div class="res-div" id="res-T4"></div>
+				<div class="res-sep" id="res-D4"></div>			<!--MK3-->
+				<div class="res-div" id="res-T5"></div>
+				<div class="res-sep" id="res-D5"></div>			<!--Birdcage-->
+				<div class="res-div" id="res-T6"></div>
+				<div class="res-sep" id="res-D6"></div>			<!--Freedom-->
+				<div class="res-div" id="res-T7"></div>			<!--Save the world-->
+				<div id="res-secret"></div>
+			</main>
+			
+			<div class="res-side">										<!-- NEEDS: click-and-drag scrolling, clickable buttons, connected unlocks, multiple tabs, 60/40 panels -->
+				<div id="res-info">
+					<div id="res-lab"></div>
+					<div id="res-factory"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div id="engineeringPage" class="navpage" style="display:none">	<!--[Build and customize suits here]-->
+			<div class="eng-side">										<!--[Current suit info]-->
+				<div class="eng-T1"></div>
+				<div class="eng-T2"></div>
+				<div class="eng-T3"></div>
+			</div>
+			
+			<main class="eng-mid">										<!--[suit GUI. drag and drop parts onto suit here]-->
+				<div class="eng-customize"></div>				<!-- NEEDS: background, drag/drop code, lower suit selection panel -->
+				<div class="eng-stats"></div>
+			</main>
+			
+			<div class="eng-side">										<!--[parts selection]-->
+				<div class="eng-upgrades"></div>
+				<div class="eng-description"></div>
+			</div>														<!-- NEEDS: parts, drag/drop code, lower parts description panel -->
+		</div>
+		
+		<div id="deployPage" class="navpage" style="display:none">		<!--[deploy suits and respond to threats here]-->
+			<main class="dpl-map"></main>								<!--  Metal gear deploy system -->
+		</div>
+		
+		<footer>														<!-- Can hold stats, eventually? -->
+			<div class="stat stat-research"></div>
+			<div class="stat stat-assets"></div>
+			<div class="stat stat-hero"></div>
+		</footer>
+	</div>
+	
+	
+<!--[Reference to javascript]-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="javascript.js"></script>
+</body>
+</html>
